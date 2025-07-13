@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Tạo instance axios với cấu hình mặc định
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api', 
+  baseURL: 'http://localhost:6969/api', 
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ api.interceptors.response.use(
 // API functions
 export const authAPI = {
   // Đăng nhập
-  login: (credentials) => api.post('/auth/login', credentials),
+  login: (credentials) => api.post('/auth/sign-in', credentials),
   
   // Đăng ký
   register: (userData) => api.post('/auth/register', userData),
